@@ -1,0 +1,141 @@
+/* SETUP */
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --green: #dcfa08;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--black);
+  color: white;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: bold;
+
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: bold;
+
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 1.15rem;
+  font-weight: bold;
+
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* UTILITY CLASSES */
+
+.text-invert-color {
+  color: var(--black);
+}
+
+.h-inherit {
+  height: inherit;
+}
+
+.te-bg-white {
+  background-color: var(--white);
+}
+
+.te-bg-black {
+  background-color: var(--black);
+}
+
+.te-bg-green {
+  background-color: var(--green);
+}
+
+.te-bg-gradient {
+  background-image: url(../assets/gradients-bg/001.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* UI CLASSES */
+
+.btn-green {
+  background-color: var(--green);
+  border: none;
+  border-radius: 0.5px;
+}
+
+.btn-green-outline {
+  outline: var(--green) solid 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0.5px;
+  transition: all 3ms;
+}
+
+.btn-green:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px 2px var(--green);
+}
+
+.btn-black {
+  background-color: var(--black);
+  border: none;
+  border-radius: 0.5px;
+}
+
+.btn-black-outline {
+  outline: var(--black) solid 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0.5px;
+  transition: all 3ms;
+}
+
+.btn-black:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px 2px var(--black);
+}
+
+/* GENERAL UI */
+
+/* Nav Bar */
+#nav-bar {
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  background-color: var(--black);
+  height: 80px;
+}
+
+#nav-bar:scrolled {
+  background-color: var(--black);
+}
+
+#nav-bar div div div img {
+  height: 50px;
+}
