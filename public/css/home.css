@@ -76,3 +76,26 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+#contact-us-section {
+
+}
+
+.contact-us-options-content {
+    width: 80%;
+}
+
+#footer-section {
+    height: 300px;
+
+}
+
+@media (max-width: 400px) {
+  .photo-grid {
+    display: grid;
+    gap: 1rem;
+  
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+  }
+}

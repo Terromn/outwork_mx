@@ -31,20 +31,26 @@
     <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
-    <section id="nav-bar">
+    <section id="nav-bar" style="position: fixed;">
       <div class="container h-inherit">
         <div
           class="h-inherit d-flex flex-row align-items-center justify-content-between"
         >
-          <div>
+          <div class="d-none d-md-block">
             <img
               src="assets/logos/isologo/isologo-white.png"
               alt="landing-nar-bar-img"
             />
           </div>
+          <div class="d-block d-md-none p-3">
+            <img
+              src="assets/logos/logotype/logotype-white.png"
+              alt="landing-nar-bar-img"
+            />
+          </div>
           <div>
             <div
-              class="d-flex flex-row align-items-center justify-content-between gap-5"
+              class="d-none d-md-flex flex-row align-items-center justify-content-between gap-5"
             >
               <a href=""><p>INICIO</p></a>
               <a href=""><p>ABOUT US</p></a>
@@ -52,6 +58,17 @@
               <a href=""><p>CONTACTO</p></a>
               <button class="btn-green">
                 <p class="text-invert-color px-3 py-1">APP</p>
+              </button>
+            </div>
+
+            <div>
+              <button class="menu-mobile-button d-md-none">
+                <span
+                  class="material-symbols-outlined p-3"
+                  style="font-size: 48px"
+                >
+                  menu
+                </span>
               </button>
             </div>
           </div>
@@ -77,9 +94,9 @@
     <section id="choose-plan-section" class="te-bg-black">
       <div class="container">
         <h2 class="text-center p-5">ELIJE TU PLAN</h2>
-        <div class="choose-plan-items row mb-5">
+        <div class="row mb-5">
           <div
-            class="col-12 col-md-4 my-2 m-md-0 p-0 d-flex flex-column align-items-center justify-content-center"
+            class="choose-plan-card col-12 col-md-4 my-2 m-md-0 p-0 d-flex flex-column align-items-center justify-content-center"
           >
             <div
               class="te-bg-white choose-plan-item d-flex flex-column justify-content-between align-items-center"
@@ -90,7 +107,7 @@
             </div>
           </div>
           <div
-            class="col-12 col-md-4 my-2 m-md-0 p-0 d-flex flex-column align-items-center justify-content-center"
+            class="choose-plan-card col-12 col-md-4 my-2 m-md-0 p-0 d-flex flex-column align-items-center justify-content-center"
           >
             <div
               class="te-bg-gradient choose-plan-item d-flex flex-column justify-content-between align-items-center"
@@ -103,7 +120,7 @@
             </div>
           </div>
           <div
-            class="col-12 col-md-4 my-2 m-md-0 p-0 d-flex flex-column align-items-center justify-content-center"
+            class="choose-plan-card col-12 col-md-4 my-2 m-md-0 p-0 d-flex flex-column align-items-center justify-content-center"
           >
             <div
               class="te-bg-green choose-plan-item d-flex flex-column justify-content-between align-items-center"
@@ -149,6 +166,42 @@
           ></div>
           <div
             class="facilities-photo photo-wide"
+            style="background-image: url(assets/outwork-gym/003.png)"
+          ></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="facilities-section" class="te-bg-green d-md-none">
+      <div class="container">
+        <h2 class="text-invert-color text-center p-4" >
+          INSTALACIONES
+        </h2>
+        <div class="photo-grid pb-5">
+        
+          <div
+            class="facilities-photo photo-wide"
+            style="background-image: url(assets/outwork-gym/004.png)"
+          ></div>
+
+          <div
+            class="facilities-photo"
+            style="background-image: url(assets/outwork-gym/003.png)"
+          ></div>
+          <div
+            class="facilities-photo"
+            style="background-image: url(assets/outwork-gym/004.png)"
+          ></div>
+          <div
+            class="facilities-photo"
+            style="background-image: url(assets/outwork-gym/002.png)"
+          ></div>
+          <div
+            class="facilities-photo photo-tall"
+            style="background-image: url(assets/outwork-gym/001.png)"
+          ></div>
+          <div
+            class="facilities-photo"
             style="background-image: url(assets/outwork-gym/003.png)"
           ></div>
         </div>
@@ -263,20 +316,134 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <h3 class="text-center p-5">
+      <h3 class="d-none d-md-block text-center py-5">
         Av. Manuel Gómez Morín 1250, Carrizalejo, 66254 San Pedro Garza García,
         N.L.
       </h3>
+      <p class="d-block d-md-none text-center py-3">
+        Av. Manuel Gómez Morín 1250, Carrizalejo, 66254 San Pedro Garza García,
+        N.L.
+      </p>
     </section>
 
     <section id="contact-us-section" class="te-bg-gradient">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-7">
-            <h2>CONTACTANOS</h2>
+        <h2 class="py-5 text-center" style="font-size: 2.5rem">CONTACTANOS</h2>
+
+        <div class="row pb-3 pb-md-5">
+          <div
+            class="col-12 col-md-7 d-flex flex-column align-items-center justify-content-center m-md-0 m-2"
+          >
+            <div style="width: 80%">
+              <form
+                class="d-flex flex-column align-items-center justify-content-center"
+                action="/submit-form"
+                method="POST"
+              >
+                <input
+                  class="w-100 p-2 my-1"
+                  type="text"
+                  name="name"
+                  placeholder="Your Name"
+                  required
+                />
+                <input
+                  class="w-100 p-2 my-1"
+                  type="email"
+                  name="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <textarea
+                  class="w-100 p-2 my-1"
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+                <button class="w-100 btn-green p-2 my-1">Submit</button>
+              </form>
+            </div>
           </div>
-          <div class="col-12 col-md-5"></div>
+          <div
+            class="col-12 col-md-5 d-flex align-items-end justify-content-center m-md-0 m-2"
+          >
+            <div
+              class="contact-us-options-content te-bg-black d-flex flex-column py-3 px-5"
+            >
+              <div
+                class="d-flex align-items-center justify-content-between my-3 flex-md-row flex-column"
+              >
+                <span class="material-symbols-outlined" style="font-size: 32px">
+                  call
+                </span>
+                <p style="font-size: 1.5rem">81 3257 1290</p>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between my-3 flex-md-row flex-column"
+              >
+                <span class="material-symbols-outlined" style="font-size: 32px">
+                  photo_camera
+                </span>
+                <p style="font-size: 1.5rem">@outwork.mx</p>
+              </div>
+              <div
+                class="d-flex align-items-center justify-content-between my-3 flex-md-row flex-column"
+              >
+                <span class="material-symbols-outlined" style="font-size: 32px">
+                  mail
+                </span>
+                <p style="font-size: 1.5rem">info@outwork.mx</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section id="footer-section">
+      <div class="container">
+        <div
+          class="d-flex flex-column flex-md-row align-items-center justify-content-between py-5"
+        >
+          <img
+            class="mb-5 mb-md-0"
+            src="assets/logos/imagotype/imagotype-white-green.png"
+            style="height: 100px"
+          />
+
+          <ul>
+            <a href="#landing-section"
+              ><p class="my-2 text-center text-md-end">INICIO</p></a
+            >
+            <a href=""><p class="my-2 text-center text-md-end">ABOUT US</p></a>
+            <a href=""><p class="my-2 text-center text-md-end">PAQUETES</p></a>
+            <a href=""><p class="my-2 text-center text-md-end">CONTACTO</p></a>
+          </ul>
+
+          <div
+            class="d-none d-md-flex flex-column align-items-center justify-content-center"
+            style="width: 40%"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.041757577457!2d-100.36582532538318!3d25.636739577430586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bdcfa3fc158d%3A0x5d690450b1909620!2sClub%20M%C3%A9xico%20Palestino%20Libanes!5e0!3m2!1sen!2smx!4v1688775707893!5m2!1sen!2smx"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <p class="text-center">
+              Av. Manuel Gómez Morín 1250, Carrizalejo, 66254 San Pedro Garza
+              García, N.L.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="te-bg-green te-">
+        <p class="text-center text-invert-color py-2" style="font-size: 12px">
+          Made With ♥ By Neil Terromn
+        </p>
       </div>
     </section>
 

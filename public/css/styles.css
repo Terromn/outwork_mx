@@ -52,6 +52,35 @@ a {
   text-decoration: none;
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .choose-plan-card {
+    height: 360px;
+  }
+}
+
+
+
 /* UTILITY CLASSES */
 
 .text-invert-color {
@@ -119,6 +148,12 @@ a {
 .btn-black:hover{
   transform: translateY(-5px);
   box-shadow: 0 0 20px 2px var(--black);
+}
+
+.menu-mobile-button {
+  background-color: transparent;
+  color: var(--white);
+  border: none;
 }
 
 /* GENERAL UI */
