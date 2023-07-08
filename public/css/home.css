@@ -100,5 +100,8 @@
     grid-auto-rows: 200px;
   }
   
+  .choose-plan-item {
+    height: 340px;
+  }
  
 }
