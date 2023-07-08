@@ -75,10 +75,7 @@ ul {
   p {
     font-size: 1rem;
   }
-
 }
-
-
 
 /* UTILITY CLASSES */
 
@@ -125,7 +122,7 @@ ul {
   transition: all 3ms;
 }
 
-.btn-green:hover{
+.btn-green:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px 2px var(--green);
 }
@@ -144,7 +141,7 @@ ul {
   transition: all 3ms;
 }
 
-.btn-black:hover{
+.btn-black:hover {
   transform: translateY(-5px);
   box-shadow: 0 0 20px 2px var(--black);
 }
@@ -172,4 +169,26 @@ ul {
 
 #nav-bar div div div img {
   height: 50px;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+  z-index: 9999;
+}
+
+.mobile-menu.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu a, .mobile-menu button {
+  margin-bottom: 10px;
 }

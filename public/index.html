@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
     <title>Outwork</title>
 
@@ -32,7 +35,7 @@
     <link rel="stylesheet" href="css/home.css" />
   </head>
   <body>
-    <section id="nav-bar" style="position: fixed;">
+    <section id="nav-bar" style="position: fixed">
       <div class="container h-inherit">
         <div
           class="h-inherit d-flex flex-row align-items-center justify-content-between"
@@ -53,17 +56,19 @@
             <div
               class="d-none d-md-flex flex-row align-items-center justify-content-between gap-5"
             >
-              <a href=""><p>INICIO</p></a>
+              <a href="#landing-section"><p>INICIO</p></a>
               <a href=""><p>ABOUT US</p></a>
-              <a href="paquetes.html"><p>PAQUETES</p></a>
-              <a href=""><p>CONTACTO</p></a>
-              <button class="btn-green">
-                <p class="text-invert-color px-3 py-1">APP</p>
-              </button>
+              <a href="#choose-plan-section"><p>PAQUETES</p></a>
+              <a href="#contact-us-section"><p>CONTACTO</p></a>
+              <a href="https://terromn-dev.web.app/">
+                <button class="btn-green">
+                  <p class="text-invert-color px-3 py-1">APP</p>
+                </button>
+              </a>
             </div>
 
             <div>
-              <button class="menu-mobile-button d-md-none">
+              <button class="menu-mobile-button d-md-none" id="menuButton">
                 <span
                   class="material-symbols-outlined p-3"
                   style="font-size: 48px"
@@ -74,6 +79,19 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div id="mobileMenu" class="mobile-menu">
+        <!-- Your mobile menu content goes here -->
+        <a href="#landing-section"><p>INICIO</p></a>
+        <a href=""><p>ABOUT US</p></a>
+        <a href="#choose-plan-section"><p>PAQUETES</p></a>
+        <a href="#contact-us-section"><p>CONTACTO</p></a>
+        <a href="https://terromn-dev.web.app/">
+          <button class="btn-green">
+            <p class="text-invert-color px-3 py-1">APP</p>
+          </button>
+        </a>
       </div>
     </section>
 
@@ -93,7 +111,7 @@
     </section>
 
     <section id="choose-plan-section" class="te-bg-black">
-      <div class="container ">
+      <div class="container">
         <h2 class="text-center pt-5">ELIJE TU PLAN</h2>
         <div class="row mb-5">
           <div
@@ -133,6 +151,39 @@
           </div>
         </div>
       </div>
+
+      <section id="classes-section" class="te-bg-black">
+        <h2 class="text-center pb-5">TIPOS DE CLASES</h2>
+        <div class="row">
+          <div
+            class="col-12 col-md-6 te-bg-gradient d-flex align-items-center justify-content-center"
+            style="
+              height: 500px;
+              background-image: url(assets/outwork-gym/006.png);
+            "
+          >
+            <h2>YOGA</h2>
+          </div>
+          <div
+            class="col-12 col-md-6 te-bg-gradient d-flex align-items-center justify-content-center"
+            style="
+              height: 500px;
+              background-image: url(assets/outwork-gym/007.png);
+            "
+          >
+            <h2 class="px-5">CALISTENIA</h2>
+          </div>
+          <div
+            class="col-12 te-bg-gradient d-flex align-items-center justify-content-center"
+            style="
+              height: 500px;
+              background-image: url(assets/outwork-gym/008.png);
+            "
+          >
+            <h2>HIIT</h2>
+          </div>
+        </div>
+      </section>
     </section>
 
     <section id="facilities-section" class="te-bg-green d-none d-md-block">
@@ -175,11 +226,8 @@
 
     <section id="facilities-section" class="te-bg-green d-md-none">
       <div class="container">
-        <h2 class="text-invert-color text-center p-4" >
-          INSTALACIONES
-        </h2>
+        <h2 class="text-invert-color text-center p-4">INSTALACIONES</h2>
         <div class="photo-grid pb-5">
-        
           <div
             class="facilities-photo photo-wide"
             style="background-image: url(assets/outwork-gym/004.png)"
@@ -219,86 +267,92 @@
           <div
             class="d-none d-md-flex col-12 col-md-4 flex-column justify-content-center align-items-center"
           >
-            <div
-              class="join-us-section-card te-bg-white d-flex flex-column justify-content-center align-items-center"
-            >
+            <a href="https://www.instagram.com/outwork.mx/">
               <div
-                class="m-3 d-flex flex-column justify-content-center align-items-center"
+                class="join-us-section-card te-bg-white d-flex flex-column justify-content-center align-items-center"
               >
                 <div
-                  class="join-us-section-img mb-3"
-                  style="
-                    background-image: url(assets/instagram-posts/edges.png);
-                  "
-                ></div>
-                <div
-                  class="join-us-section-icons d-flex flex-row w-100 justify-content-between align-items-center"
+                  class="m-3 d-flex flex-column justify-content-center align-items-center"
                 >
-                  <span class="material-symbols-outlined text-invert-color">
-                    favorite
-                  </span>
-                  <span class="material-symbols-outlined text-invert-color">
-                    send
-                  </span>
+                  <div
+                    class="join-us-section-img mb-3"
+                    style="
+                      background-image: url(assets/instagram-posts/edges.png);
+                    "
+                  ></div>
+                  <div
+                    class="join-us-section-icons d-flex flex-row w-100 justify-content-between align-items-center"
+                  >
+                    <span class="material-symbols-outlined text-invert-color">
+                      favorite
+                    </span>
+                    <span class="material-symbols-outlined text-invert-color">
+                      send
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div
             class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center"
           >
-            <div
-              class="join-us-section-card te-bg-white d-flex flex-column justify-content-center align-items-center"
-            >
+            <a href="https://www.instagram.com/outwork.mx/">
               <div
-                class="m-3 d-flex flex-column justify-content-center align-items-center"
+                class="join-us-section-card te-bg-white d-flex flex-column justify-content-center align-items-center"
               >
                 <div
-                  class="join-us-section-img mb-3"
-                  style="
-                    background-image: url(assets/instagram-posts/center.png);
-                  "
-                ></div>
-                <div
-                  class="join-us-section-icons d-flex flex-row w-100 justify-content-between align-items-center"
+                  class="m-3 d-flex flex-column justify-content-center align-items-center"
                 >
-                  <span class="material-symbols-outlined text-invert-color">
-                    favorite
-                  </span>
-                  <span class="material-symbols-outlined text-invert-color">
-                    send
-                  </span>
+                  <div
+                    class="join-us-section-img mb-3"
+                    style="
+                      background-image: url(assets/instagram-posts/center.png);
+                    "
+                  ></div>
+                  <div
+                    class="join-us-section-icons d-flex flex-row w-100 justify-content-between align-items-center"
+                  >
+                    <span class="material-symbols-outlined text-invert-color">
+                      favorite
+                    </span>
+                    <span class="material-symbols-outlined text-invert-color">
+                      send
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
           <div
             class="d-none d-md-flex col-12 col-md-4 flex-column justify-content-center align-items-center"
           >
-            <div
-              class="join-us-section-card te-bg-white d-flex flex-column justify-content-center align-items-center"
-            >
+            <a href="https://www.instagram.com/outwork.mx/">
               <div
-                class="m-3 d-flex flex-column justify-content-center align-items-center"
+                class="join-us-section-card te-bg-white d-flex flex-column justify-content-center align-items-center"
               >
                 <div
-                  class="join-us-section-img mb-3"
-                  style="
-                    background-image: url(assets/instagram-posts/edges.png);
-                  "
-                ></div>
-                <div
-                  class="join-us-section-icons d-flex flex-row w-100 justify-content-between align-items-center"
+                  class="m-3 d-flex flex-column justify-content-center align-items-center"
                 >
-                  <span class="material-symbols-outlined text-invert-color">
-                    favorite
-                  </span>
-                  <span class="material-symbols-outlined text-invert-color">
-                    send
-                  </span>
+                  <div
+                    class="join-us-section-img mb-3"
+                    style="
+                      background-image: url(assets/instagram-posts/edges.png);
+                    "
+                  ></div>
+                  <div
+                    class="join-us-section-icons d-flex flex-row w-100 justify-content-between align-items-center"
+                  >
+                    <span class="material-symbols-outlined text-invert-color">
+                      favorite
+                    </span>
+                    <span class="material-symbols-outlined text-invert-color">
+                      send
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -331,7 +385,9 @@
       <div class="container">
         <h2 class="py-5 text-center" style="font-size: 2.5rem">CONTACTANOS</h2>
 
-        <div class="row pb-3 pb-md-5 d-flex align-items-center justify-content-center">
+        <div
+          class="row pb-3 pb-md-5 d-flex align-items-center justify-content-center"
+        >
           <div
             class="col-12 col-md-7 d-flex flex-column align-items-center justify-content-center m-md-0 m-2"
           >
@@ -460,5 +516,7 @@
       integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
       crossorigin="anonymous"
     ></script>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
