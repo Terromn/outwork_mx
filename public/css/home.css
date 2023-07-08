@@ -1,61 +1,78 @@
 #landing-section {
-    height: 100vh;
-    background-image: url(../assets/outwork-gym/001.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  height: 100vh;
+  background-image: url(../assets/outwork-gym/001.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /* ENDS */
 
 #choose-plan-section {
-    background-color: var(--black);
-} 
+  background-color: var(--black);
+}
 
 .choose-plan-item {
-    height: 500px;
-    width: 80%;
+  height: 500px;
+  width: 80%;
 }
 
 #facilities-section {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 
 .photo-grid {
-    display: grid;
-    gap: 2rem;
+  display: grid;
+  gap: 2rem;
 
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    grid-auto-rows: 240px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
 }
 
 .photo-tall {
-    grid-row: span 2 / auto;
+  grid-row: span 2 / auto;
 }
 
 .photo-wide {
-    grid-column: span 2 / auto;
+  grid-column: span 2 / auto;
 }
 
 .facilities-photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 3ms;
 }
+
 
 .facilities-content {
-    height: 600px;
+  height: 600px;
+}
+
+#join-us-section {
 }
 
 
+.join-us-section-card {
+    transition: all 3ms;
+    box-shadow: 0 0 100px -10px var(--black);
+}
 
+.join-us-section-card:hover {
+    transform: translateY(-25px);
+}
 
+.join-us-section-img {
+  height: 300px;
+  width: 300px;
 
-
-
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
