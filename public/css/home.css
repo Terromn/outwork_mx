@@ -1,6 +1,7 @@
 #landing-section {
   height: 100vh;
-  background-image: url(../assets/outwork-gym/001.png);
+  background-image: url(../assets/outwork-gym/002.png);
+  opacity: 4;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,7 +91,7 @@
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 460px) {
   .photo-grid {
     display: grid;
     gap: 1rem;
@@ -98,4 +99,6 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: 200px;
   }
+  
+ 
 }

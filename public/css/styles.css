@@ -10,6 +10,8 @@ body {
   margin: 0;
   background-color: var(--black);
   color: white;
+
+  overflow-x: hidden;
 }
 
 h1 {
@@ -74,9 +76,6 @@ ul {
     font-size: 1rem;
   }
 
-  .choose-plan-card {
-    height: 360px;
-  }
 }
 
 
