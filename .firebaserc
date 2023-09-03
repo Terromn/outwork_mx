@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "outwork-388105"
-  }
+    "default": "outwork-f8f3f",
+    "outwork": "outwork-f8f3f"
+  },
+  "targets": {},
+  "etags": {}
 }

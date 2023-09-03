@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "website-outwork",
     "public": "public",
     "ignore": [
       "firebase.json",
