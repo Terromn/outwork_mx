@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "website-outwork",
+    "site": "website-outwork.mx",
     "public": "public",
     "ignore": [
       "firebase.json",
