@@ -12,3 +12,5 @@ for (let i = 0; i < menuItems.length; i++) {
     mobileMenu.classList.remove('show');
   });
 }
+
+
