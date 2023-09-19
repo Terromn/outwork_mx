@@ -59,6 +59,27 @@ ul {
   margin: 0;
 }
 
+input {
+  text-align: center;
+
+  width: 300px;
+  padding: 12px;
+  color: var(--white);
+  background-color: var(--black);
+  border: 2px solid gray;
+}
+
+input:focus {
+  border: none;
+  outline: 2px solid var(--green);
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+
+
 @media (max-width: 400px) {
   h1 {
     font-size: 3rem;
@@ -189,6 +210,7 @@ ul {
   justify-content: center;
 }
 
-.mobile-menu a, .mobile-menu button {
+.mobile-menu a,
+.mobile-menu button {
   margin-bottom: 10px;
 }
