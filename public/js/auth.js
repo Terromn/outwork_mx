@@ -46,18 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const userPassword = document.getElementById("userPassword");
     const signInButton = document.getElementById("signInButton");
     const signUpButton = document.getElementById("signUpButton");
+    const errorText = document.getElementById("error-text");
 
     const userSignUp = async () => {
         const signUpEmail = userEmail.value;
         const signUpPassword = userPassword.value;
 
         createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
-            .then((userCredential) => {
-                const user = userCredential.user;
+            .then(() => {
                 window.location.href = "../index.html";
             })
             .catch((error) => {
-                console.log(error.code + error.message);
+                errorText.textContent = error.message;
             });
     };
 
@@ -68,10 +68,12 @@ document.addEventListener("DOMContentLoaded", function () {
         signInWithEmailAndPassword(auth, signInEmail, signInPassword)
             .then((userCredential) => {
                 const user = userCredential.user;
+
                 window.location.href = "../index.html";
             })
             .catch((error) => {
-                console.log(error.code + error.message);
+                errorText.textContent = error.message;
+
             });
     };
 

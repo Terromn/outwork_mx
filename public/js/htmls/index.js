@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Redirecting to:", link);
                 window.location.href = link;
             } else {
-                console.log("You need to be logged in to access this.");
+                alert("Porfavor Acceda a su cuenta antes de hacer algun pago.");
             }
         });
     });
