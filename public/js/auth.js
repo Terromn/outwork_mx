@@ -29,7 +29,17 @@ const isLoggedIn = () => {
     });
 };
 
-export { isLoggedIn }
+const logoutUser = async () => {
+    try {
+        await signOut(auth);
+        console.log("User has been logged out.");
+        // You can perform additional actions here after logout if needed.
+    } catch (error) {
+        console.error("Error logging out:", error);
+    }
+};
+
+export { isLoggedIn, logoutUser}
 
 document.addEventListener("DOMContentLoaded", function () {
     const userEmail = document.getElementById("userEmail");

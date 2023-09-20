@@ -56,11 +56,9 @@
               </button>
             </a>
 
-            <a href="html/loginAndRegister.html">
-              <button class="btn-black">
-                <p class=" py-1">LOGIN</p>
-              </button>
-            </a>
+            <button class="btn-black" data-link="html/loginAndRegister.html" id="btn-log">
+              <p class="px-3 py-1" id="btn-log-text">LOGIN</p>
+          </button>
 
           </div>
 
@@ -94,11 +92,10 @@
           <p class="text-invert-color px-3 py-1">APP</p>
         </button>
       </a>
-      <a href="html/loginAndRegister.html">
-        <button class="btn-green-outline">
-          <p class="text-invert-color px-3 py-1">LOGIN</p>
-        </button>
-      </a>
+      <button class="btn-black" data-link="html/loginAndRegister.html" id="btn-log">
+        <p class="px-3 py-1" id="btn-log-text">LOGIN</p>
+    </button>
+    
     </div>
   </section>
 
@@ -413,6 +410,9 @@
 
   <!-- Scripts -->
   <script src="js/htmls/index.js" type="module"></script>
+
+  <script src="js/cssHelper.js" type="module"></script>
+
 
   <!-- Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
