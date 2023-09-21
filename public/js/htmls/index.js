@@ -52,10 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const link = button.getAttribute("data-link");
             const isAuthenticated = await isLoggedIn();
 
-            console.log("Button clicked.");
-            console.log("Is authenticated:", isAuthenticated);
-            console.log("Link:", link);
-
             if (isAuthenticated) {
                 console.log("Redirecting to:", link);
                 window.location.href = link;
