@@ -1,4 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+
+import { initializeFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -20,6 +23,8 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const firestore = initializeFirestore(app);
+
 
 const isLoggedIn = () => {
     return new Promise((resolve, reject) => {
@@ -39,22 +44,41 @@ const logoutUser = async () => {
     }
 };
 
-export { isLoggedIn, logoutUser}
+export { isLoggedIn, logoutUser }
 
 document.addEventListener("DOMContentLoaded", function () {
     const userEmail = document.getElementById("userEmail");
     const userPassword = document.getElementById("userPassword");
+    const userName = document.getElementById("userName");
+
     const signInButton = document.getElementById("signInButton");
     const signUpButton = document.getElementById("signUpButton");
     const errorText = document.getElementById("error-text");
 
     const userSignUp = async () => {
+        const signUpName = userName.value;
         const signUpEmail = userEmail.value;
         const signUpPassword = userPassword.value;
 
         createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
-            .then(() => {
-                window.location.href = "../index.html";
+            .then(async () => {
+                const user = auth.currentUser;
+                if (user) {
+                    const uid = user.uid;
+                    const userDocRef = doc(firestore, "users", uid);
+
+                    // Create the Firestore document with the UID as the document ID.
+                    await setDoc(userDocRef, {
+                        name: signUpName,
+                        reservedClasses: [],
+                        creditsAvailable: 0,
+                        profilePicture: `${Math.floor(Math.random() * 6)}.png`,
+                    });
+
+                    window.location.href = "../index.html";
+                } else {
+                    console.log("User is not authenticated.");
+                }
             })
             .catch((error) => {
                 errorText.textContent = error.message;
