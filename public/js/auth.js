@@ -1,30 +1,14 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-
-import { initializeFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
-
-import {
-    getAuth,
+import { 
+    auth, 
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     onAuthStateChanged,
     signOut,
-} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-auth.js";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyCExcWv1RxenkllDOiERix1EoN66ZUh-J4",
-    authDomain: "outwork-f8f3f.firebaseapp.com",
-    databaseURL: "https://outwork-f8f3f-default-rtdb.firebaseio.com",
-    projectId: "outwork-f8f3f",
-    storageBucket: "outwork-f8f3f.appspot.com",
-    messagingSenderId: "296052478452",
-    appId: "1:296052478452:web:ade9633ec13ce6b59029a1",
-    measurementId: "G-CVLBGXKKLW"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const firestore = initializeFirestore(app);
-
+    db,
+    doc,
+    setDoc, 
+} from './firebase.js';
 
 const isLoggedIn = () => {
     return new Promise((resolve, reject) => {
@@ -47,6 +31,8 @@ const logoutUser = async () => {
 export { isLoggedIn, logoutUser }
 
 document.addEventListener("DOMContentLoaded", function () {
+
+
     const userEmail = document.getElementById("userEmail");
     const userPassword = document.getElementById("userPassword");
     const userName = document.getElementById("userName");
@@ -65,17 +51,19 @@ document.addEventListener("DOMContentLoaded", function () {
                 const user = auth.currentUser;
                 if (user) {
                     const uid = user.uid;
-                    const userDocRef = doc(firestore, "users", uid);
 
-                    // Create the Firestore document with the UID as the document ID.
-                    await setDoc(userDocRef, {
+                    await setDoc(doc(db, "users", uid), {
                         name: signUpName,
-                        reservedClasses: [],
                         creditsAvailable: 0,
-                        profilePicture: `${Math.floor(Math.random() * 6)}.png`,
+                        reservedClasses: [],
+                        profilePicture: `${Math.floor(Math.random() * 6)}.jpg`
+
+                    }).then(() => {
+                        window.location.href = "../index.html";
+
                     });
 
-                    window.location.href = "../index.html";
+
                 } else {
                     console.log("User is not authenticated.");
                 }

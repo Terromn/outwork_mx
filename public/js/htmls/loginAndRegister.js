@@ -1,7 +1,7 @@
 const signInButton = document.getElementById("signInButton");
 const signUpButton = document.getElementById("signUpButton");
 
-const nameInput = document.getElementById("name");
+const nameInput = document.getElementById("userName");
 
 document.addEventListener("DOMContentLoaded", function () {
     
