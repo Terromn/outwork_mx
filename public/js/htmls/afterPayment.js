@@ -1,27 +1,40 @@
 import {
     auth,
-
     db,
     doc,
-    setDoc,
+    getDoc,
+    updateDoc,
 } from '../firebase.js';
 
 const currentUrl = window.location.href;
 const urlParams = new URLSearchParams(currentUrl);
 const crds = urlParams.get("crds");
 
-document.addEventListener("DOMContentLoaded", function () {
+const user = auth.currentUser;
 
-    console.log("DOMContentLoaded event fired.");
+auth.onAuthStateChanged(async (user) => {
+    if (user) {
+        const uid = user.uid;
+        console.log(uid);
 
-    const uid = auth.currentUser.uid;
+        console.log("DOMContentLoaded event fired.");
 
-    console.log("starting to upload the credits...s");
+        console.log("starting to add credits...");
 
-    setDoc(doc(db, "users", uid), {
+        // Get the current document
+        const userDocRef = doc(db, "users", uid);
+        const userDocSnap = await getDoc(userDocRef);
 
-        creditsAvailable: crds,
-    
-    })
+        if (userDocSnap.exists()) {
+            const currentCredits = userDocSnap.data().creditsAvailable || 0; // Get the current credits or default to 0
+            const newCredits = currentCredits + parseInt(crds, 10); // Add the credits
 
+            // Update the document with the new credits value
+            await updateDoc(userDocRef, {
+                creditsAvailable: newCredits,
+            });
+        }
+    } else {
+        console.log("User is not authenticated.");
+    }
 });

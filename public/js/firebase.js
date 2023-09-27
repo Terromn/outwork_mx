@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
-import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
+import { getFirestore, doc, setDoc, updateDoc, getDoc} from "https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js";
 import {
     getAuth,
     createUserWithEmailAndPassword,
@@ -35,4 +35,6 @@ export {
     db,
     doc,
     setDoc,
+    updateDoc,
+    getDoc,
 };
