@@ -1,5 +1,10 @@
 import { isLoggedIn, logoutUser } from '../auth.js';
 
+AOS.init({
+  duration: 1200,
+})
+
+
 const buttons = document.getElementsByClassName("btn-price");
 const btnLogText = document.getElementById("btn-log-text");
 const btnLog = document.getElementById("btn-log");
