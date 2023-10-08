@@ -3,6 +3,8 @@
   --black: #000000;
   --white: #ffffff;
   --green: #dcfa08;
+  --blue: #b2dfe6;
+  ;
 }
 
 body {
@@ -98,6 +100,22 @@ input::placeholder {
   }
 }
 
+
+.whatsapp-button {
+  height: 80px;
+  width: 80px;
+  position: fixed;
+  
+  z-index: 100;
+  bottom: 20px; /* Adjust this value to change the button's vertical position */
+  right: 20px; /* Adjust this value to change the button's horizontal position */
+  background-color: #25d366; /* WhatsApp's green color */
+  color: #fff;
+  border-radius: 50%; /* Makes the button round */
+  padding: 15px; /* Adjust the size of the button */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a shadow to the button */
+}
+
 /* UTILITY CLASSES */
 
 .text-invert-color {
@@ -122,6 +140,13 @@ input::placeholder {
 
 .te-bg-gradient {
   background-image: url(../assets/backgrounds/001.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.te-bg-gradient-blue {
+  background-image: url(../assets/backgrounds/003.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -167,6 +192,48 @@ input::placeholder {
   box-shadow: 0 0 20px 2px var(--black);
 }
 
+.btn-blue {
+  background-color: var(--blue);
+  border: none;
+  border-radius: 0.5px;
+}
+
+.btn-blue-outline {
+  outline: var(--blue) solid 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0.5px;
+  transition: all 3ms;
+}
+
+.btn-blue:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px 2px var(--blue);
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: none;
+  border-radius: 0.5px;
+}
+
+.btn-transparent-outline {
+  outline: transparent solid 8px;
+  border: none;
+  background-color: transparent;
+  border-radius: 0.5px;
+  transition: all 3ms;
+}
+
+.btn-transparent p {
+  opacity: 0.85;
+}
+
+.btn-transparent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px 2px transparent;
+}
+
 .menu-mobile-button {
   background-color: transparent;
   color: var(--white);
@@ -177,14 +244,15 @@ input::placeholder {
 
 /* Nav Bar */
 #nav-bar {
-  position: absolute;
+  position: fixed;
   z-index: 100000;
   width: 100%;
-  background-color: var(--black);
+  background-color: transparent;
+  transition: all 0.3s ease;
   height: 80px;
 }
 
-#nav-bar:scrolled {
+#nav-bar.scrolled {
   background-color: var(--black);
 }
 
@@ -213,4 +281,42 @@ input::placeholder {
 .mobile-menu a,
 .mobile-menu button {
   margin-bottom: 10px;
+}
+
+/* Animations */
+.from-top {
+  transform: translateY(-100%);
+}
+
+.from-right {
+  transform: translateX(-100%);
+}
+
+.from-bottom {
+  transform: translateY(100%);
+}
+
+.from-left {
+  transform: translateX(100%);
+}
+
+
+
+.hidden {
+  opacity: 0%;
+  filter: blur(5px);
+  transition: all .5s;
+}
+
+.show {
+  filter: blur(0px);
+  opacity: 100%;
+  transform: translateY(0);
+  transform: translateX(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
 }

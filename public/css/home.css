@@ -17,6 +17,14 @@
   width: 80%;
 }
 
+.classes-cards:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.classes-cards:nth-child(3) {
+  transition-delay: 400ms;
+}
+
 #facilities-section {
   background-color: var(--green);
 }

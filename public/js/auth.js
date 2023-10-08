@@ -1,5 +1,5 @@
-import { 
-    auth, 
+import {
+    auth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     onAuthStateChanged,
@@ -7,7 +7,7 @@ import {
 
     db,
     doc,
-    setDoc, 
+    setDoc,
 } from './firebase.js';
 
 const isLoggedIn = () => {

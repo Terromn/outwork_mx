@@ -27,6 +27,15 @@ const updateLoginButtonText = () => {
 
 document.addEventListener("DOMContentLoaded", function () {
 
+    window.addEventListener('scroll', () => {
+        const navbar = document.getElementById('nav-bar');
+        if (window.scrollY > 80) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
     updateLoginButtonText();
 
     btnLogsArray.forEach((btnLogs) => {
