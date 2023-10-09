@@ -77,7 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Redirecting to:", link);
                 window.location.href = link;
             } else {
-                alert("Porfavor Acceda a su cuenta antes de hacer algun pago.");
+                window.location.href = "https://outwork.mx/html/loginAndRegister.html";
+
             }
         });
     });

@@ -3,10 +3,19 @@ const signUpButton = document.getElementById("signUpButton");
 
 const nameInput = document.getElementById("userName");
 
+const emailInput = document.getElementById("userEmail");
+const passwordInput = document.getElementById("userPassword");
+
 document.addEventListener("DOMContentLoaded", function () {
-    
+
     signInButton.addEventListener("click", function () {
         // Add the "btn-green" class and remove the "btn-black" class from the Sign In button.
+        const currentAutocompleteValue = passwordField.getAttribute("autocomplete");
+        if (currentAutocompleteValue === "new-password") {
+            // If it's "new-password," change it to "password"
+            passwordInput.setAttribute("autocomplete", "password");
+            emailInput.setAttribute("autocomplete", "username");
+          }
         signInButton.classList.add("btn-green");
         signInButton.querySelector("p").classList.add("text-invert-color");
         signInButton.classList.remove("btn-black");
@@ -28,6 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     signUpButton.addEventListener("click", function () {
+        const currentAutocompleteValue = passwordField.getAttribute("autocomplete");
+        if (currentAutocompleteValue === "password") {
+            // If it's "new-password," change it to "password"
+            passwordField.setAttribute("autocomplete", "new-password");
+            emailInput.setAttribute("autocomplete", "new-username");
+          }
         // Add the "btn-green" class and remove the "btn-black" class from the Sign In button.
         signInButton.classList.remove("btn-green");
         signInButton.querySelector("p").classList.remove("text-invert-color");
