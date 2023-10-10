@@ -43,6 +43,15 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  color: var(--white);
+  padding: 0;
+  margin: 0;
+}
+
 p {
   font-size: 1.15rem;
   font-weight: bold;
@@ -153,6 +162,10 @@ textarea::placeholder {
 
 .h-inherit {
   height: inherit;
+}
+
+.w-inherit {
+  width: inherit;
 }
 
 .te-bg-white {

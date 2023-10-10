@@ -99,6 +99,37 @@
 
 }
 
+.te-card-container:hover > .te-card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.te-card {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all .5s
+}
+
+
+.te-card-front,
+.te-card-back {
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.te-card-front {
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+.te-card-back {
+  transform: rotateY(180deg);
+}
+
+
+
 @media (max-width: 460px) {
   .photo-grid {
     display: grid;

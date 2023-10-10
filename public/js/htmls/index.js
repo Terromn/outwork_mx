@@ -1,5 +1,6 @@
 import { isLoggedIn, logoutUser } from '../auth.js';
 
+const cardContainer = document.querySelector('.card-container');
 
 const buttons = document.getElementsByClassName("btn-price");
 const btnLogTexts = document.getElementsByClassName("btn-log-text");
@@ -62,6 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     })
+
+
 
 
 
