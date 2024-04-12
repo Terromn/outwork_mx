@@ -1,0 +1,17 @@
+/* SETUP */
+:root {
+    --black: #000000;
+    --white: #ffffff;
+    --green: #dcfa08;
+    --blue: #b2dfe6;
+    ;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0; 
+    background-color: var(--white);
+    color: black;
+  
+    overflow-x: hidden;
+  }

@@ -9,9 +9,9 @@
 
 body {
   padding: 0;
-  margin: 0;
+  margin: 0; 
   background-color: var(--black);
-  color: white;
+  color: var(--white);
 
   overflow-x: hidden;
 }
@@ -195,6 +195,18 @@ textarea::placeholder {
 }
 
 /* UI CLASSES */
+
+input[type="radio"] + label {
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  color: white;
+}
+
 
 .btn-green {
   background-color: var(--green);
