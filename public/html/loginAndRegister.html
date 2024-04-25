@@ -28,67 +28,66 @@
         <input
           type="text"
           name="name"
-          id="userName"
+          id="userFullName"
           placeholder="Nombre Completo"
+          required
         />
         <input
           type="text"
-          name="name"
-          id=""
+          name="user_name"
+          id="userName"
           placeholder="Nombre De Usuario"
           maxlength="12"
         />
         <input
-          type="text"
-          name="name"
-          id="userName"
+          type="tel"
+          accept="number"
+          name="phone_number"
+          id="phoneNumber"
           placeholder="Numero De Celular"
         />
         <input
           type="text"
-          name="name"
+          name="email"
           id="userEmail"
           placeholder="Email"
           autocomplete="new-username"
         />
         <input
           type="password"
-          name="password"
+          name="user_password"
           id="userPassword"
           placeholder="Password"
           autocomplete="new-password"
         />
-        <input
-          type="password"
-          name="password"
-          id="userPassword"
-          placeholder="Repeat Password"
-          autocomplete="new-password"
-        />
 
-        <div
-          class="container d-flex flex-column justify-content-center align-items-center align-content-center"
-        >
-          <form>
-            <div
-              class="radio-group d-flex flex-row align-content-center justify-content-center align-items-center"
+        <form class="form flex-center" id="maleOrFemale">
+          <div class="form-row flex-center">
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              class="form-input"
+              style="border: none"
+            />
+            <label for="male" class="form-label">Male</label>
+          </div>
+          <div class="form-row flex-center">
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              class="form-input"
+              style="border: none"
+            />
+            <label
+              for="female"
+              class="form-label"
+              style="margin: none; padding: none"
+              >Female</label
             >
-              <div
-                class="d-flex flex-column justify-content-center align-items-center align-content-center" style="width: 120px;"
-              >
-                <input type="radio" id="male" name="gender" value="male" />
-                <label class="pt-2" for="male">Male</label>
-              </div>
-              <div
-                class="d-flex flex-column justify-content-center align-items-center align-content-center" style="width: 120px; "
-              >
-                <input type="radio" id="female" name="gender" value="female" style="color: gray;"/>
-                <label class="pt-2" for="female">Female</label>
-              </div>
-            </div>
-          </form>
-        </div>
-
+          </div>
+        </form>
         <p style="font-weight: 400; color: red" id="error-text"></p>
 
         <button class="btn-green px-4 py-1" id="signUpButton">
@@ -97,6 +96,10 @@
 
         <button class="btn-black px-4 py-1" id="signInButton">
           <p>Log In</p>
+        </button>
+
+        <button id="forgot-pwd-btn" class="btn-black" style="color: var(--green);" class="pt-5">
+          <u> Fogot Password? </u>
         </button>
       </div>
     </div>
