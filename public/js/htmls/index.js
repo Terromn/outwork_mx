@@ -2,11 +2,12 @@ import { isLoggedIn, logoutUser } from '../auth.js';
 
 const cardContainer = document.querySelector('.card-container');
 
-const buttons = document.getElementsByClassName("btn-price");
+const btnViewPlan = document.querySelectorAll("#choose-plan-section button");
+const btnPrices = document.getElementsByClassName("btn-price");
 const btnLogTexts = document.getElementsByClassName("btn-log-text");
 const btnLogs = document.getElementsByClassName("btn-log");
 
-const buttonArray = Array.from(buttons);
+const buttonArray = Array.from(btnPrices);
 
 const btnLogTextsArray = Array.from(btnLogTexts);
 const btnLogsArray = Array.from(btnLogs);
@@ -63,6 +64,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     })
+
+    btnViewPlan.forEach((button) => {
+        button.addEventListener("click", async (event) => {
+            event.preventDefault();
+    
+            const link = button.getAttribute("href");
+            console.log(link);
+            const isAuthenticated = await isLoggedIn();
+    
+            if (isAuthenticated) {
+                console.log("Redirecting to:", link);
+                window.location.href = link;
+            } else {
+                window.location.href = "https://outwork.mx/html/loginAndRegister.html";
+            }
+        });
+    });
 
 
 
